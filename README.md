@@ -1,4 +1,4 @@
-# typescript-vue-demo
+# vue-typescript-project
 
 Learning typescript based on the vue-cli builder
 
