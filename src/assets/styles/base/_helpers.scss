@@ -1,0 +1,35 @@
+// top right bottom left
+$sides:
+    't' 'top',
+    'r' 'right',
+    'b' 'bottom',
+    'l' 'left';
+
+$spaces:
+  '0' 0px,
+  '5' 5px,
+  '10' 10px,
+  '15' 15px,
+  '20' 20px,
+  '25' 25px,
+  '30' 30px;
+
+// margins
+@each $side, $sidevalue in $sides {
+  @each $name, $value in $spaces {
+    .m#{$side}-#{$name} {
+      margin-#{$sidevalue}: $value;
+    }
+  }
+}
+
+// paddings
+@each $side in $sides {
+  @each $name, $value in $spaces {
+    .p#{$side}-#{$name} {
+      font-size: $value;
+      height: $value;
+      width: $value;
+    }
+  }
+}

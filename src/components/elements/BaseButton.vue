@@ -35,20 +35,9 @@ export default class BaseButton extends Vue {
 </script>
 
 <style lang="scss">
-$primary: #6495EA;
-$danger: #DC143C;
-$success: #3fb983;
-$white: #FFFFFF;
-
-$theme-colors: (
-  'primary': $primary,
-  'success': $success,
-  'danger': $danger,
-);
-
 @mixin btn-theme($btn-color) {
   background-color: $btn-color;
-  color: $white;
+  color: $color-white;
 
   &:hover {
     transition: background-color 0.3s;

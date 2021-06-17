@@ -1,0 +1,14 @@
+// variables are imported globally to vue.config.js
+// https://cli.vuejs.org/guide/css.html#passing-options-to-pre-processor-loaders
+$color-grey: #ccc;
+$color-primary: #6495EA;
+$color-danger: #DC143C;
+$color-success: #3fb983;
+$color-white: #FFFFFF;
+
+$theme-colors: (
+  'primary': $color-primary,
+  'success': $color-success,
+  'danger': $color-danger,
+);
+
