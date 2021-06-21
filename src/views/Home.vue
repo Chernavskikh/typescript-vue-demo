@@ -2,7 +2,7 @@
   <div class="home">
     <div class="column-left">
       <h1>Reminders</h1>
-      <img src="../assets/images/notes.jpeg" alt="">
+      <img src="~@/assets/images/notes.jpeg" alt="">
     </div>
     <div class="column-right">
       <LoginForm/>
