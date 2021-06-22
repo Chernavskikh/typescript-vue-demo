@@ -19,7 +19,6 @@ export default class BaseInput extends Vue {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   @Emit('input')
   onInputChange (e:{ target: HTMLInputElement }): string | number | null {
-    console.log(e)
     return e.target.value
   }
 }

@@ -3,7 +3,7 @@
     <h2 class="title text-center mt-0 mb-15">Welcome Back</h2>
     <base-input
       class="mb-15"
-      v-model="loginFormData.login"
+      v-model="loginFormData.email"
       type="text"
     ></base-input>
 
@@ -13,7 +13,9 @@
       type="password"
     ></base-input>
 
-    <base-button theme="primary">Login</base-button>
+    <p>Don't have an account yet? <a href="/signup">Signup</a></p>
+
+    <base-button theme="primary" @click="login">Login</base-button>
   </div>
 </template>
 
@@ -21,9 +23,10 @@
 import { Component, Vue } from 'vue-property-decorator'
 import BaseButton from '@/components/elements/BaseButton.vue'
 import BaseInput from '@/components/elements/BaseInput.vue'
+import { auth } from '@/firebase/firebase'
 
 interface LoginFormData {
-  login: string;
+  email: string;
   password: string;
 }
 
@@ -35,12 +38,20 @@ interface LoginFormData {
 })
 
 export default class LoginForm extends Vue {
-  private inputValue = ''
-
   private loginFormData: LoginFormData = {
-    login: '',
+    email: '',
     password: ''
   };
+
+  login ():void {
+    auth.signInWithEmailAndPassword(this.loginFormData.email, this.loginFormData.password)
+      .then(() => {
+        this.$router.push({ path: '/dashboard' })
+      })
+      .catch((e) => {
+        console.error(e)
+      })
+  }
 }
 </script>
 
