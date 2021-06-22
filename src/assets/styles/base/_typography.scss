@@ -1,6 +1,14 @@
+a {
+  color: $color-primary;
+}
+
 .title {
   font-size: 21px;
   font-weight: 600;
+
+  &-lg {
+    font-size: 28px;
+  }
 }
 
 .text-center {

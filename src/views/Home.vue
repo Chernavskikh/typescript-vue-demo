@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="column-left">
-      <h1>Reminders</h1>
+      <h1 class="title title-lg mb-30">Reminders</h1>
       <img src="~@/assets/images/notes.jpeg" alt="">
     </div>
     <div class="column-right">
@@ -36,6 +36,7 @@ export default {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 15vh;
 
   img {
     max-width: 75%;

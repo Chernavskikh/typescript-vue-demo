@@ -5,17 +5,19 @@
       class="mb-15"
       v-model="loginFormData.email"
       type="text"
+      placeholder="Email"
     ></base-input>
 
     <base-input
+      placeholder="Password"
       class="mb-15"
       v-model="loginFormData.password"
       type="password"
     ></base-input>
 
-    <p>Don't have an account yet? <a href="/signup">Signup</a></p>
-
     <base-button theme="primary" @click="login">Login</base-button>
+
+    <p class="text-center mt-15">Don't have an account yet? <a href="/signup">Signup</a></p>
   </div>
 </template>
 
